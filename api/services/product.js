@@ -5,8 +5,8 @@ module.exports = {
     console.log('productservices')
     try {
       let product = new Product({...serviceData})
-      await product.save()
-      return product
+      let result = await product.save()
+      return result.toObject()
     } catch (error) {
       console.log('somthing went worng in create product')
       throw new Error(error)
