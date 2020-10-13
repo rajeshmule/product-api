@@ -11,4 +11,10 @@ module.exports = {
       next()
     }
   },
+  validateQueryParams: (schema) => {
+    return (req, res, next) => {
+      validateObjectSchema(req.query, schema)
+      next()
+    }
+  },
 }

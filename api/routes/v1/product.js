@@ -11,5 +11,18 @@ router
     joiSchemaValidation.validateBody(productSchema.createProductSchema),
     productController.createProduct,
   )
+  .get(
+    joiSchemaValidation.validateQueryParams(productSchema.getAllProductSchema),
+    productController.getAllProducts,
+  )
+
+router
+  .route('/:id')
+  .get(productController.getProductById)
+  .put(
+    joiSchemaValidation.validateBody(productSchema.updataProductSchema),
+    productController.updateProduct,
+  )
+  .delete(productController.deleteProduct)
 
 module.exports = router
