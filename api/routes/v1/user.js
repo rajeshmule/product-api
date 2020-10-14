@@ -9,6 +9,8 @@ router
   .route('/signup')
   .post(joiSchemaValidation.validateBody(userSchema.signup), userController.signup)
 
-router.route('/:id').get().put().delete()
+router
+  .route('/login')
+  .post(joiSchemaValidation.validateBody(userSchema.login), userController.login)
 
 module.exports = router
