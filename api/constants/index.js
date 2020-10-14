@@ -11,6 +11,10 @@ module.exports = {
     PRODUCT_UPDATED: 'Product Updated Successfully.',
     PRODUCT_DELETED: 'Product Deleted Successfully.',
   },
+  userMessage: {
+    SIGNUP_SUCCESS: 'User Signup Successfully.',
+    DUPLICATE_EMAIL: 'User alerady exist with given email.',
+  },
   databaseMessage: {
     INVALID_ID: 'Invlid Id.',
   },
